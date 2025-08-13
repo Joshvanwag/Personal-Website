@@ -3,12 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd personal-site
-        - npm ci        # install dependencies cleanly
+        - cd personal-site && npm ci        # install dependencies cleanly
     build:
       commands:
-        - cd personal-site
-        - npm run build # build the Vite app
+        - cd personal-site && npm run build # build the Vite app
   artifacts:
     baseDirectory: personal-site/dist # Vite outputs here
     files:
