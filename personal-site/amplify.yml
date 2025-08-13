@@ -1,0 +1,16 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci        # install dependencies cleanly
+    build:
+      commands:
+        - npm run build # build the Vite app
+  artifacts:
+    baseDirectory: dist # Vite outputs here
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
