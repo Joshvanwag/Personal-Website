@@ -9,6 +9,7 @@ frontend:
         - npm ci        # install dependencies cleanly
     build:
       commands:
+        - ls -la
         - cd personal-site
         - pwd
         - npm run build # build the Vite app
