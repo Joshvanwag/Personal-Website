@@ -1,17 +1,18 @@
 version: 1
-appRoot: personal-site
 frontend:
   phases:
     preBuild:
       commands:
+        - cd personal-site
         - npm ci        # install dependencies cleanly
     build:
       commands:
+        - cd personal-site
         - npm run build # build the Vite app
   artifacts:
-    baseDirectory: dist # Vite outputs here
+    baseDirectory: personal-site/dist # Vite outputs here
     files:
       - '**/*'
   cache:
     paths:
-      - node_modules/**/*
+      - personal-site/node_modules/**/*
