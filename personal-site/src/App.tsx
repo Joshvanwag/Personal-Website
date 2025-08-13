@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import backgroundImage from './assets/background.jpeg'
 import './App.css'
-import myImage from './assets/FAM.jpg'
-import myImage2 from './assets/Josh.jpg'
+import myImage from './assets/FAM.JPG'
+import myImage2 from './assets/Josh.JPG'
 import myImage3 from './assets/IMG_9355.jpg'
 
 function App() {
