@@ -1,4 +1,5 @@
 version: 1
+appRoot: personal-site
 frontend:
   phases:
     preBuild:
