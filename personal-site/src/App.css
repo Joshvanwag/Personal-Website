@@ -171,6 +171,7 @@ html, body {
   height: 400px;
   border-radius: 20px;
   overflow: hidden;
+  max-width: 100%;
 }
 
 .profile-image img {
@@ -426,17 +427,104 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  /* Header Mobile Styles */
+  .header {
+    padding: 0.5rem 0;
+  }
+  
   .header-content {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+  
+  .header-title {
+    font-size: 1.2rem;
   }
   
   .header-nav {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.3rem;
   }
   
+  .nav-button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Hero Section Mobile Styles */
+  .hero-section {
+    padding-top: 80px;
+    height: 100vh;
+  }
+  
+  .hero-content {
+    padding: 0 1rem;
+    margin-top: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .btn {
+    width: 200px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Profile Images Mobile Styles */
+  .profile-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 15px;
+  }
+  
+  /* Section Mobile Styles */
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-section,
+  .projects-section,
+  .contact-section {
+    padding: 3rem 0;
+  }
+  
+  .about-container,
+  .projects-container,
+  .contact-container {
+    padding: 0 1rem;
+  }
+  
+  .about-content,
+  .projects-content,
+  .contact-content {
+    max-width: 100%;
+  }
+  
+  .about-description,
+  .projects-description,
+  .contact-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Projects Grid Mobile */
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -446,35 +534,70 @@ html, body {
     padding: 1.5rem;
   }
   
-  .nav-button {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
-  }
-  
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  
-  .hero-subtitle {
+  .project-title {
     font-size: 1.2rem;
   }
   
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
+  .project-description {
+    font-size: 0.95rem;
   }
   
-  .btn {
-    width: 200px;
+  /* Social Links Mobile */
+  .social-link {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+  }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1rem;
+  }
+  
+  .nav-button {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .profile-image {
+    width: 240px;
+    height: 240px;
+    border-radius: 12px;
   }
   
   .section-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   
-  .about-section,
-  .projects-section,
-  .contact-section {
-    padding: 4rem 0;
+  .about-description,
+  .projects-description,
+  .contact-description {
+    font-size: 0.9rem;
+  }
+  
+  .project-card {
+    padding: 1rem;
+  }
+  
+  .project-title {
+    font-size: 1.1rem;
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+  }
+  
+  .social-link {
+    font-size: 1.3rem;
+    margin: 0 0.3rem;
   }
 }
