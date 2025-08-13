@@ -3,6 +3,7 @@ import backgroundImage from './assets/background.jpeg'
 import './App.css'
 import myImage from './assets/FAM.jpg'
 import myImage2 from './assets/Josh.jpg'
+import myImage3 from './assets/IMG_9355.jpg'
 
 function App() {
   const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set());
@@ -104,14 +105,18 @@ function App() {
           >
             About Me
           </h2>
-          <div className="about-content">
-            <div className="profile-image">
-              <img src={myImage} alt="Profile" />
-            </div>
+                      <div className="about-content">
+              <div 
+                id="about-profile-image"
+                className={`profile-image fade-in ${visibleElements.has('about-profile-image') ? 'visible' : ''}`}
+              >
+                <img src={myImage} alt="Profile" />
+              </div>
             <p 
               id="about-desc-1"
               className={`about-description fade-in ${visibleElements.has('about-desc-1') ? 'visible' : ''}`}
             >
+              <br />
               <br />
               I am married to the love of my life, and we have a beautiful daughter.
               We are both from Utah and both went to Bingham High School. I love sports and have a golfing addiction. 
@@ -129,6 +134,14 @@ function App() {
               I am currently working on a startup with some friends creating a CRM. I have experience in all of the following areas: Java, Python, C++,
               JavaScript, React, SQL, TypeScript, Spring Boot, Docker, AWS, and more.
             </p>
+            <br />
+            <br />
+                         <div 
+               id="profile-image"
+               className={`profile-image fade-in ${visibleElements.has('profile-image') ? 'visible' : ''}`}
+             >
+               <img src={myImage3} alt="Profile" />
+             </div>
           </div>
         </div>
       </section>
@@ -143,12 +156,91 @@ function App() {
             My Projects
           </h2>
           <div className="projects-content">
-            <p 
-              id="projects-desc"
-              className={`projects-description fade-in ${visibleElements.has('projects-desc') ? 'visible' : ''}`}
-            >
-              Here are some of the projects I've worked on.
-            </p>
+            <div className="projects-grid">
+              
+
+              <div 
+                id="project-2"
+                className={`project-card fade-in ${visibleElements.has('project-2') ? 'visible' : ''}`}
+              >
+                <div className="project-icon">
+                  <i className="fas fa-graduation-cap"></i>
+                </div>
+                <h3 className="project-title">Academic Projects</h3>
+                <p className="project-description">
+                  Various school projects demonstrating software engineering principles and best practices.
+                </p>
+                <div className="project-tech">
+                  <span className="tech-tag">Java</span>
+                  <span className="tech-tag">C++</span>
+                  <span className="tech-tag">Algorithms</span>
+                  <span className="tech-tag">Data Structures</span>
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">SQL</span>
+                  <span className="tech-tag">Spring Boot</span>
+                  <span className="tech-tag">JavaScript</span>
+                </div>
+              </div>
+
+              <div 
+                id="project-3"
+                className={`project-card fade-in ${visibleElements.has('project-3') ? 'visible' : ''}`}
+              >
+                <div className="project-icon">
+                  <i className="fas fa-users"></i>
+                </div>
+                <h3 className="project-title">CRM Application</h3>
+                <p className="project-description">
+                  Customer Relationship Management system for a startup, handling customer data and interactions.
+                </p>
+                <div className="project-tech">
+                  <span className="tech-tag">React</span>
+                  <span className="tech-tag">TypeScript</span>
+                  <span className="tech-tag">Spring Boot</span>
+                  <span className="tech-tag">AWS</span>
+                  <span className="tech-tag">Docker</span>
+                  <span className="tech-tag">Java</span>
+                  <span className="tech-tag">PostgreSQL</span>
+                </div>
+              </div>
+
+              <div 
+                id="project-4"
+                className={`project-card fade-in ${visibleElements.has('project-4') ? 'visible' : ''}`}
+              >
+                <div className="project-icon">
+                  <i className="fas fa-cloud"></i>
+                </div>
+                <h3 className="project-title">Cloud Services Consultant</h3>
+                <p className="project-description">
+                  Consultant for a startup implementing TypeScript and cloud services solutions.
+                </p>
+                <div className="project-tech">
+                  <span className="tech-tag">TypeScript</span>
+                  <span className="tech-tag">AWS</span>
+                  <span className="tech-tag">Docker</span>
+                  <span className="tech-tag">Flutter</span>
+                </div>
+              </div>
+
+              <div 
+                id="project-5"
+                className={`project-card fade-in ${visibleElements.has('project-5') ? 'visible' : ''}`}
+              >
+                <div className="project-icon">
+                  <i className="fas fa-globe"></i>
+                </div>
+                <h3 className="project-title">Personal Website</h3>
+                <p className="project-description">
+                  Modern, responsive personal portfolio website built with React and TypeScript.
+                </p>
+                <div className="project-tech">
+                  <span className="tech-tag">React</span>
+                  <span className="tech-tag">TypeScript</span>
+                  <span className="tech-tag">CSS3</span>
+                </div>
+              </div>
+            </div>
             {/* Project cards will go here */}
           </div>
         </div>
@@ -163,7 +255,10 @@ function App() {
           >
             Get In Touch
           </h2>
-          <div className="profile-image">
+          <div 
+            id="contact-profile-image"
+            className={`profile-image fade-in ${visibleElements.has('contact-profile-image') ? 'visible' : ''}`}
+          >
             <img src={myImage2} alt="Profile" />
           </div>
           <div className="contact-content">
